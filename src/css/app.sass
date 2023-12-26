@@ -1,0 +1,705 @@
+@import "vars"
+@import "breakpoints"
+
+@font-face
+  font-family: 'Giant Boss'
+  src: local('Giant Boss'), local('Giant Boss')
+  src: url('/fonts/giant-boss.otf')
+  src: url('/fonts/giant-boss.ttf') format('truetype')
+  font-weight: 900
+  font-style: normal
+
+$pink-color: #FFBCCD
+$pink-bg-color: #A30D33
+$blue-bg-color: #0056B2
+$green-bg-color: #00C287
+$blue-card-color: #003773
+$red-card-color: #a30d33
+$pink-border-color: #e96687
+$green-border-color: #076e4f
+$blue-border-color: #003773
+$darkblue-border-color: #131B2A
+
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-track
+  background: #f1f1f1
+
+::-webkit-scrollbar-thumb
+  background: #0056B2
+
+::-webkit-scrollbar-thumb:hover
+  background: #003773
+
+body
+  overflow-x: hidden
+  font-family: 'Nunito', sans-serif
+img
+  display: block
+a
+  text-decoration: none
+  color: inherit
+
+.mb-40
+  margin-bottom: 40px
+  @include md-d
+    margin-bottom: 30px
+.mb-60
+  margin-bottom: 60px
+  @include md-d
+    margin-bottom: 40px
+.text-accent
+  color: $pink-bg-color !important
+.text-blue
+  color: $blue-border-color !important
+.text-blue-light
+  color: $blue-bg-color !important
+.text-green
+  color: $green-border-color !important
+.text-pink
+  color: $pink-color !important
+.text-20
+  font-size: 20px
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+  @include lg-d
+    font-size: 18px
+  @include md-d
+    font-size: 16px
+.text-16
+  font-size: 16px
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+  @include lg-d
+    font-size: 18px
+  @include md-d
+    font-size: 16px
+  &.text-weight-bolder
+    font-weight: 900
+    line-height: 160%
+  &.text-weight-regular
+    font-weight: 600
+    line-height: 160%
+.text-28
+  font-family: Nunito
+  font-size: 28px
+  font-style: normal
+  font-weight: 700
+  line-height: 140%
+  color: #fff
+  @include lg-d
+    font-size: 20px
+.text-32
+  text-shadow: 6px 6px 0px $green-border-color
+  font-size: 32px
+  font-style: italic
+  font-weight: 1000
+  line-height: 100%
+  text-transform: uppercase
+  color: white
+  & .q-icon
+    text-shadow: none
+    color: white
+  @include lg-d
+    font-size: 26px
+    text-shadow: 3px 3px 0px $green-border-color
+  @include md-d
+    font-size: 20px
+
+.q-focus-helper
+  opacity: 0 !important
+.text-48
+  color: #FFF
+  text-shadow: 6px 6px 0px $darkblue-border-color
+  font-size: 48px
+  font-style: italic
+  font-weight: 1000
+  line-height: 100%
+  text-transform: uppercase
+  @include lg-d
+    font-size: 35px
+  @include md-d
+    font-size: 30px
+.text-52
+  text-shadow: 6px 6px 0px #73112A
+  font-size: 52px
+  font-style: italic
+  font-weight: 1000
+  line-height: 100%
+  text-transform: uppercase
+  color: #fff
+  @include lg-d
+    font-size: 35px
+  @include md-d
+    font-size: 30px
+    text-shadow: 3px 3px 0px #73112A
+
+  &.blue
+    text-shadow: 6px 6px 0px $blue-border-color
+    @include md-d
+      text-shadow: 3px 3px 0px $blue-border-color
+  &.green
+    text-shadow: 6px 6px 0px $green-border-color
+    @include md-d
+      text-shadow: 3px 3px 0px $green-border-color
+.btn
+  user-select: none
+  font-family: Nunito
+  font-size: 20px
+  font-style: normal
+  font-weight: 900
+  line-height: 150%
+  color: $pink-bg-color !important
+  border-radius: 24px
+  background: #FFF
+  padding: 16px 32px
+  box-shadow: 6px 6px 0px 0px $pink-border-color
+  border: 3px solid transparent
+  text-align: center
+  &.small
+    font-size: 16px
+    padding: 6px 32px
+    box-shadow: 3px 3px 0px 0px $pink-border-color
+  @include sm-d
+    display: inline-block
+    width: 100%
+  &.outline
+    border: 3px solid $pink-bg-color
+    background: transparent
+
+.big-title
+  position: relative
+  color: #FFF
+  text-align: center
+  font-family: Giant Boss
+  font-size: 237px
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+  letter-spacing: -2.37px
+  z-index: 1
+  -webkit-text-stroke: 6px $pink-bg-color
+  &::before
+    position: absolute
+    content: url(~assets/title-decor.png)
+    left: -108px
+    top: -131px
+    z-index: 1
+    @include md-d
+
+      transform: scale(.5)
+      left: -152px
+      top: -175px
+
+  @include lg-d
+    font-size: 18vw
+    display: inline-block
+    -webkit-text-stroke: 4px $pink-bg-color
+
+
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0
+  @include lg-d
+    padding: 0 20px
+
+.card
+  border-radius: 64px
+  background: #FFF
+  overflow: hidden
+  @include md-d
+    border-radius: 24px
+  img
+    display: block
+    width: 100%
+    height: auto
+    object-fit: contain
+  &.w-padding
+    padding: 48px
+    @include md-d
+      padding: 38px
+  &.pink
+    box-shadow: 12px 12px 0px 0px $pink-border-color
+  &.green
+    box-shadow: 12px 12px 0px 0px $green-border-color
+  &.blue
+    box-shadow: 12px 12px 0px 0px $blue-bg-color
+
+
+.cards
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 30px
+  @include sm-d
+    grid-template-columns: 1fr 1fr
+    & .card:nth-child(3)
+      display: none
+
+.buttons
+  pointer-events: revert
+  display: flex
+  flex-wrap: wrap
+  gap: 24px
+  z-index: 10
+
+
+.top
+  background: #FFBCCD
+  position: relative
+  padding-top: 20px
+  padding-bottom: 50px
+  &::after
+    position: absolute
+    content: url(~assets/top-r.png)
+    right: 0
+    top: 10%
+    @include md-d
+      transform: scale(0.5)
+      right: -81px
+    @include sm-d
+      top: 0
+  z-index: 1
+  &-blur
+    position: absolute
+    width: 100%
+    height: 30%
+    bottom: 0
+    background: #FF97B1
+    filter: blur(12px)
+    z-index: -1
+
+.header
+  position: relative
+  z-index: 100
+  border-radius: 24px
+  background: #FFF
+  padding: 14px 25px 10px 25px
+  max-width: 1440px
+  margin: 0 auto 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  @include lg-d
+    margin: 0 10px 70px
+  & .social
+    @include sm-d
+      display: none
+
+
+.nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 32px
+  @include md-d
+    display: none
+
+.social
+  display: flex
+  align-items: center
+
+  gap: 10px
+
+.title
+  position: relative
+  display: inline-block
+  color: #FFF
+  font-family: Giant Boss
+  font-size: 128px
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+  z-index: 1
+  @include lg-d
+    font-size: 10vw
+  @include md-d
+    font-size: 14vw
+
+  &.faq
+    -webkit-text-stroke: 6px $green-border-color
+    @include md-d
+      -webkit-text-stroke: 3px $green-border-color
+  &.collection
+    -webkit-text-stroke: 6px $green-border-color
+    @include md-d
+      -webkit-text-stroke: 3px $green-border-color
+    &::after
+      position: absolute
+      content: url(~assets/green-decor.png)
+      left: 30%
+      bottom: -170px
+      z-index: -1
+      @include lg-d
+        transform: scale(.6)
+        bottom: -150px
+  &.rare-collection
+    -webkit-text-stroke: 6px $blue-border-color
+    @include md-d
+      -webkit-text-stroke: 3px $blue-border-color
+  &.follow
+    &::after
+      position: absolute
+      content: url(~assets/follow-d.png)
+      left: -120px
+      top: -70px
+      z-index: 1
+      @include md-d
+        transform: scale(.5)
+        left: -130px
+        top: -110px
+  &.roadmap
+    -webkit-text-stroke: 6px $pink-bg-color
+    @include md-d
+      -webkit-text-stroke: 3px $pink-bg-color
+    &::after
+      position: absolute
+      content: url(~assets/roadmap-d.png)
+      right: -140px
+      top: -110px
+      z-index: 1
+      @include md-d
+        transform: scale(.5)
+        right: -150px
+        top: -140px
+  &.team
+    -webkit-text-stroke: 6px $pink-bg-color
+    @include md-d
+      -webkit-text-stroke: 3px $pink-bg-color
+    &::after
+      position: absolute
+      content: url(~assets/team-decor.png)
+      left: -40px
+      top: -100px
+      z-index: 1
+      @include md-d
+        transform: scale(.7)
+        left: -40px
+        top: -120px
+      @include sm-d
+        transform: scale(.4)
+        left: -100px
+        top: -130px
+.subtitle
+  max-width: 821px
+  margin: 0 auto 40px
+
+.section-green
+  position: relative
+  padding: 180px 0
+  background: $green-bg-color
+  z-index: 1
+  @include lg-d
+    padding: 100px 0
+  &::before
+    position: absolute
+    content: url(~assets/green-left.png)
+    left: 0
+    @include md-d
+      transform: scale(.5)
+      left: -60px
+      top: 0
+  &::after
+    position: absolute
+    content: url(~assets/green-right.png)
+    right: 0
+    bottom: 0
+    @include md-d
+      transform: scale(.5)
+      right: -100px
+      bottom: -100px
+  &.w-bg
+    background: $green-bg-color url(~assets/g-bg.png) no-repeat center center
+    background-size: cover
+    &::after
+      content: none
+    &::before
+      content: none
+
+.section-blue
+  position: relative
+  padding: 180px 0
+  background: $blue-bg-color
+  z-index: 1
+  @include lg-d
+    padding: 100px 0
+
+.section-pink
+  padding-top: 180px
+  padding-bottom: 110px
+  background: $pink-color
+  @include lg-d
+    padding-top: 100px
+    padding-bottom: 60px
+  @include sm-d
+    padding-top: 100px
+    padding-bottom: 20px
+.section-pink-next
+  padding-top: 110px
+  padding-bottom: 180px
+  background: $pink-color
+  @include lg-d
+    padding-top: 60px
+    padding-bottom: 100px
+  @include sm-d
+    padding-top: 20px
+    padding-bottom: 100px
+
+.slider-w-padding
+  & .splide__track
+    padding: 30px !important
+
+.w-transform
+  & .splide__slide
+    &:nth-child(1)
+      transform: rotate(-5deg)
+    &:nth-child(3)
+      transform: rotate(5deg)
+    &:nth-child(4)
+      transform: rotate(-5deg)
+    &:nth-child(6)
+      transform: rotate(5deg)
+
+.green-next_arrow
+  position: absolute
+  width: 96px
+  height: 96px
+  background: url(~assets/gr-r.png)
+  background-size: contain
+  border: none
+  z-index: 10
+  right: -100px
+  top: 50%
+  transform: translateY(-50%)
+  @include md-d
+    width: 45px
+    height: 45px
+    top: unset
+    bottom: -80px
+    right: 30%
+  svg
+    display: none
+  &.blue
+    background: url(~assets/bl-r.png)
+    background-size: contain
+    right: 20px
+    @include md-d
+      width: 45px
+      height: 45px
+      top: unset
+      bottom: -80px
+      right: 30%
+
+.green-prev_arrow
+  position: absolute
+  width: 96px
+  height: 96px
+  background: url(~assets/gr-l.png)
+  background-size: contain
+  border: none
+  z-index: 10
+  left: -100px
+  top: 50%
+  transform: translateY(-50%)
+  svg
+    display: none
+  @include md-d
+    width: 45px
+    height: 45px
+    top: unset
+    bottom: -80px
+    left: 30%
+  &.blue
+    background: url(~assets/bl-l.png)
+    background-size: contain
+    left: 20px
+    @include md-d
+      width: 45px
+      height: 45px
+      top: unset
+      bottom: -80px
+      left: 30%
+
+.big-card
+  padding: 48px
+  border-radius: 48px
+  background: $blue-card-color
+  box-shadow: 12px 12px 0px 0px $darkblue-border-color
+  //max-width: 885px
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 32px
+  @include md-d
+    padding: 38px
+    border-radius: 38px
+  @include sm-d
+    grid-template-columns: 1fr
+  & .image
+    img
+      border-radius: 30px
+      width: 100%
+      height: auto
+      object-fit: contain
+      display: block
+
+
+.roadmap-card
+  border-radius: 48px
+  background: $pink-bg-color
+  box-shadow: 16px 16px 0px 0px $pink-border-color
+  padding: 48px
+  &__line
+    position: relative
+    width: 100%
+    height: 3px
+    background: #fff
+    margin-bottom: 32px
+    &::before
+      position: absolute
+      content: ''
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      background: #fff
+      left: -8px
+      top: -7px
+    &::after
+      position: absolute
+      content: ''
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      background: #fff
+      right: -8px
+      top: -7px
+
+
+.team-grid
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 50px
+  max-width: 1200px
+  margin: 0 auto
+  @include sm-d
+    grid-template-columns: 1fr
+    padding: 0 40px
+    grid-gap: 20px
+
+.team-card
+  &:nth-child(1)
+    & .card
+      transform: rotate(-5deg)
+      @include sm-d
+        transform: none
+  &:nth-child(2)
+    padding-top: 60px
+    @include sm-d
+      padding-top: 0
+  &:nth-child(3)
+    & .card
+      transform: rotate(5deg)
+      @include sm-d
+        transform: none
+
+.faq-list
+  max-width: 900px
+  margin: 0 auto
+  &-text
+    padding: 30px 0 36px 20px
+
+  & .q-expansion-item
+    position: relative
+    border-top: 3px solid #80e1c3
+    &::before
+      position: absolute
+      content: ''
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      background: #80e1c3
+      left: -8px
+      top: -9px
+    &::after
+      position: absolute
+      content: ''
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      background: #80e1c3
+      right: -8px
+      top: -9px
+
+
+.decor
+  height: auto
+  object-fit: contain
+  position: absolute
+
+  &.cir-b
+    left: 50%
+    transform: translateX(-50%)
+    top: 40px
+    @include lg-d
+      width: 100%
+      top: 20%
+  &.cir-s
+    left: 0
+    top: 250px
+    @include md-d
+      display: none
+  &.face
+    right: 0
+    bottom: 0
+    @include lg-d
+      transform: scale(.5)
+      bottom: -120px
+      right: -90px
+    @include sm-d
+      bottom: -120px
+      right: -190px
+
+.bottom
+  & .header
+    padding: 50px 0
+    margin: 0
+    & .social
+      @include sm-d
+        display: flex
+.logo
+  margin-right: 50px
+.menu-toggle
+  display: none
+  width: 28px
+  height: 28px
+  background: url(~assets/blank.png)
+  background-size: contain
+
+  align-items: center
+  justify-content: center
+  margin-left: 30px
+  @include md-d
+    display: flex
+
+.custom
+  overflow-x: hidden
+
+.mobile-menu
+  position: relative
+  background: #FFBCCD
+  z-index: -1
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 30px
+  & .menu-toggle
+    position: absolute
+    right: 30px
+    top: 30px
+
+
+
