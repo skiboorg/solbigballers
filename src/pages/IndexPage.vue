@@ -49,6 +49,22 @@
         </div>
 
       </div>
+      <div class="container">
+
+        <div class="row q-col-gutter-lg">
+          <div class="col-12 ">
+            <div class="card w-padding  ">
+              <p class="text-24 q-mb-xl">     Lorem ipsum dolor sit amet, consectetur adipiscing elit. A congue lorem suspendisse morbi
+                nam a est dolor. Vestibulum erat sollicitudin laoreet rhoncus dictums</p>
+              <q-input outlined type="textarea" class="q-mb-lg" v-model="base64"/>
+              <p v-if="decodedMessage" class="q-mt-lg">{{decodedMessage}}</p>
+              <a href="#" @click.prevent="decode" class="btn">Decode</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
 <!--      <div class="top-blur"></div>-->
     </section>
     <section id='collection' ref="collection" class="section-green">
@@ -66,6 +82,7 @@
         </Splide>
       </div>
     </section>
+
 <!--    <section class="section-blue">-->
 <!--      <div class="text-center mb-40">-->
 <!--      <p class="title rare-collection  text-center">rare collection</p>-->
@@ -323,7 +340,8 @@ const menuVisible = ref(false)
 
 
 
-
+const base64 = ref(null)
+const decodedMessage = ref(null)
 
 const collectionSliderOptions ={
   rewind: true,
@@ -406,6 +424,14 @@ const faqs = [
   {title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.'},
 ]
 
+const decode = ()=>{
+  try {
+    decodedMessage.value = atob(base64.value);
+  } catch (e) {
+    console.error(e);
+    decodedMessage.value = 'Cannot decode base64';
+  }
+}
 
 
 </script>
