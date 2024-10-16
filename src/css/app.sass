@@ -2,16 +2,25 @@
 @import "breakpoints"
 @import "wolf"
 
+body
+  font-family: "Sigmar One", sans-serif !important
+
 @font-face
-  font-family: 'Giant Boss'
-  src: local('Giant Boss'), local('Giant Boss')
-  src: url('/fonts/giant-boss.otf')
-  src: url('/fonts/giant-boss.ttf') format('truetype')
+  font-family: 'Pixel Grafiti'
+  src: local('Pixel Grafiti'), local('Pixel Grafiti')
+  src: url('/fonts/Pixel-Grafiti.ttf')
+  src: url('/fonts/Pixel-Grafiti.ttf') format('truetype')
   font-weight: 900
   font-style: normal
 
+.text-pixel
+  font-family: "Pixel Grafiti", sans-serif
+  font-optical-sizing: auto
+  font-weight: 700
+  font-style: normal
+
 .text-nunito
-  font-family: "Nunito", sans-serif
+  font-family: "Sigmar One", sans-serif
   font-optical-sizing: auto
   font-weight: 700
   font-style: normal
@@ -43,8 +52,8 @@ body
   overflow-x: hidden
 
 .pen
-  font-family: 'Nunito', sans-serif
-  background: #000 url(~assets/bg.png) repeat-y center center
+  font-family: 'Sigmar One', sans-serif
+  background: #101010 url(~assets/bgg.png) repeat-y center center
 img
   display: block
 a
@@ -94,7 +103,7 @@ a
     font-weight: 600
     line-height: 160%
 .text-28
-  font-family: Nunito
+  font-family: Sigmar One
   font-size: 28px
   font-style: normal
   font-weight: 700
@@ -103,7 +112,7 @@ a
   @include lg-d
     font-size: 20px
 .text-24
-  font-family: Nunito
+  font-family: Sigmar One
   font-size: 24px
   font-style: normal
   font-weight: 700
@@ -143,8 +152,8 @@ a
   @include md-d
     font-size: 30px
 .text-52
-  text-shadow: 6px 6px 0px #c3c3c3
-  font-size: 52px
+
+  font-size: 36px
   font-style: italic
   font-weight: 1000
   line-height: 100%
@@ -171,7 +180,7 @@ a
   padding: 0 10px
 .btn
   user-select: none
-  font-family: Nunito
+  font-family: Sigmar One
   font-size: 24px
   font-style: normal
   font-weight: 900
@@ -198,28 +207,28 @@ a
   position: relative
   color: #FFF
   text-align: center
-  font-family: Giant Boss
-  font-size: 237px
+  font-family: Pixel Grafiti
+  font-size: 128px
   font-style: normal
   font-weight: 400
   line-height: normal
   letter-spacing: -2.37px
   z-index: 1
 
-  &::before
-    position: absolute
-    content: url(~assets/title-dec.png)
-    right: -200px
-    top: -170px
-    z-index: 1
-    @include md-d
-
-      transform: scale(.2)
-      right: -270px
-      top: -260px
+  //&::before
+  //  position: absolute
+  //  content: url(~assets/title-dec.png)
+  //  right: -200px
+  //  top: -170px
+  //  z-index: 1
+  //  @include md-d
+  //
+  //    transform: scale(.2)
+  //    right: -270px
+  //    top: -260px
 
   @include lg-d
-    font-size: 17vw
+    font-size: 10vw
     display: inline-block
     //-webkit-text-stroke: 4px $pink-bg-color
 
@@ -238,6 +247,9 @@ a
   overflow: hidden
   @include md-d
     border-radius: 24px
+  &.no-bg
+    background: transparent
+    color: #ffffff
   img
     display: block
     width: 100%
@@ -324,7 +336,7 @@ a
   position: relative
   display: inline-block
   color: #FFF
-  font-family: Giant Boss
+  font-family: Pixel Grafiti
   font-size: 128px
   font-style: normal
   font-weight: 400
@@ -648,7 +660,7 @@ a
   &.cir-b
     left: 50%
     transform: translateX(-50%)
-    top: 40px
+    top: -30px
     @include lg-d
       width: 100%
       top: 20%

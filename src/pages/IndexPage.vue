@@ -33,14 +33,13 @@
       </header>
       <div class="container">
         <div class="text-center mb-40">
-          <p class="big-title ">bitballers</p>
+          <p class="big-title ">BitBallers</p>
         </div>
         <div class="row q-col-gutter-lg">
           <div class="col-12 col-md-6">
-            <div class="card w-padding  ">
-              <p class="text-24 q-mb-xl">     Lorem ipsum dolor sit amet, consectetur adipiscing elit. A congue lorem suspendisse morbi
-                nam a est dolor. Vestibulum erat sollicitudin laoreet rhoncus dictums</p>
-              <a href="#" class="btn">Buy now</a>
+            <div class="card w-padding no-bg ">
+              <p class="text-24 q-mb-xl">Bitballers is where creativity and technology converge in the epicenter of chaos. Here we break down boundaries and stereotypes, creating a world where everyone can stand out and express themselves without censorship. Ready to shine in your uniqueness? Welcome to the club where guys with big balls play only by their own rules.</p>
+              <a href="#" class="btn bg-white text-dark">enter</a>
           </div>
           </div>
           <div class="col-12 col-md-6">
@@ -72,9 +71,13 @@
         <div class="text-center mb-40">
         <p class="title collection  text-center">ABOUT balls</p>
         </div>
-        <p class="text-28 subtitle text-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sed egestas purus, ultricies cursus tristique at. In cras id pharetra scelerisque. Ullamcorper.</p>
+
         <Splide :options="collectionSliderOptions" aria-label="auctions" class="slider-w-padding w-transform">
           <SplideSlide v-for="(i,index) in 3" :key="i">
+            <p class="text-28  text-center ">
+              We're breaking out of the old rules and playing by our own. Inspired by the power of decentralization, we are a community of tech rebels, digital artists and boundary-breaking creatives.
+              Bitballers isn't just about technology, it's about merging art, freedom and self-expression into one unstoppable force.
+            </p>
             <div class="card w-shadow">
               <img :src="`slider/slider${i}.png`" alt="">
             </div>
@@ -108,7 +111,7 @@
 <!--    </section>-->
     <section id='ballsmap' ref="ballsmap" class="section-pink">
       <div class="text-center mb-40">
-        <p class="title   text-center">ballsMAP</p>
+        <p class="title   text-center">Roadmap</p>
 <!--        <Splide :options="roadmapSliderOptions" aria-label="auctions" class="slider-w-padding ">-->
 <!--          <SplideSlide v-for="(i,index) in 6" :key="i">-->
 <!--            <div class="roadmap-card">-->
@@ -133,20 +136,21 @@
       </div>
       <div class="roadmap-container">
         <div class="row q-col-gutter-xl">
-          <div class="col-12 col-md-6 rm" v-for="i in 4" :key="i">
+          <div class="col-12  rm" v-for="i in 1" :key="i">
             <div class="roadmap-card">
               <div class="roadmap-card__line"></div>
-              <div class="flex items-center q-mb-lg">
-                <svg class="q-mr-md" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.16217" y="0.168945" width="20.2736" height="20.2736" rx="5.06841" fill="black"/>
-                  <path d="M6.07532 10.4264L9.09223 13.4434L14.5227 8.01291" stroke="white" stroke-width="2.53421" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+<!--              <div class="flex items-center q-mb-lg">-->
+<!--                <svg class="q-mr-md" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <rect x="0.16217" y="0.168945" width="20.2736" height="20.2736" rx="5.06841" fill="black"/>-->
+<!--                  <path d="M6.07532 10.4264L9.09223 13.4434L14.5227 8.01291" stroke="white" stroke-width="2.53421" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--                </svg>-->
 
-                <p class="no-margin text-16 text-dark text-weight-bolder ">Q4 2021</p>
-              </div>
-              <p class="text-52 q-mb-lg text-left">concept and design</p>
+<!--                <p class="no-margin text-16 text-dark text-weight-bolder ">Q4 2021</p>-->
+<!--              </div>-->
+              <p class="text-52 q-mb-lg text-left text-pixel">The Ball's Way</p>
               <p class="text-16 text-dark text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.
+                In the vast and ever-changing expanse of the digital world, there are no straight paths - only endless possibilities. Every Bitballer is created from the fabric of code, not for predefined functions, but for the pure pleasure of decentralized creativity. No fixed plans - just the freedom to explore new horizons
+
               </p>
 
             </div>
@@ -217,15 +221,29 @@
 
 
 <!--    </section>-->
+    <section id='vision' ref="vision" class="section-green w-bg">
+      <div class="container">
+        <div class="text-center mb-40">
+          <p class="title  text-center">Balls Vision</p>
+          <p class="text-28  text-center ">
+            At Bitballers we see a future where everyone has the right to be themselves, where there is no room for restrictions and standardization. We strive to create a space where creative freedom and technology come together to unlock the potential of everyone who dares to go beyond the boundaries of the usual. Our goals are not just to create a platform, but to build a new digital world where innovation doesn't obey rules, but sets them.<br><br>
+            We want Bitballers to become a place where courage and originality are welcomed and everyone can find their unique place, regardless of what society dictates. We believe that only by breaking old concepts can true freedom and creative growth be achieved. Our community is not just participants, it is a driving force that together creates something new, unconstrained.<br><br>
+            We envision a world where there are no barriers to self-expression, where everyone can be part of a big digital movement. There is no room for mediocrity in Bitballers - everyone who is ready to move forward, breaking stereotypes and creating the future is valued here.
+          </p>
+        </div>
+
+      </div>
+    </section>
     <section id='faq' ref="faq" class="section-green w-bg">
       <div class="container">
         <div class="text-center mb-40">
-          <p class="title  text-center">FAQ</p>
+          <p class="title  text-center">FackYou</p>
+
         </div>
         <q-list class="faq-list">
           <q-expansion-item :label="item.title"
                             group="faq"
-                            header-class="text-32 q-py-md"
+                            header-class="text-32 q-py-md text-pixel"
                             v-for="(item,index) in faqs" :key="index"
 
           >
@@ -238,21 +256,21 @@
       <div class="text-center mb-40">
         <p class="title    text-center">unfollow us</p>
       </div>
-      <p class="text-28 subtitle text-center">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sed egestas purus, ultricies cursus tristique at. In cras id pharetra scelerisque. Ullamcorper.
-      </p>
+<!--      <p class="text-28 subtitle text-center">-->
+<!--        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sed egestas purus, ultricies cursus tristique at. In cras id pharetra scelerisque. Ullamcorper.-->
+<!--      </p>-->
       <div class="social justify-center">
-        <a href="#">
-          <img src="~assets/ds-b-b.png" alt="">
+<!--        <a href="#">-->
+<!--          <img src="~assets/ds-b-b.png" alt="">-->
 
-        </a>
+<!--        </a>-->
         <a href="#">
           <img src="~assets/tw-b-b.png" alt="">
         </a>
       </div>
       <img src="~assets/cir-b.png" class="decor cir-b" alt="">
 <!--      <img src="~assets/cir-s.png" class="decor cir-s" alt="">-->
-      <img src="~assets/face.png" class="decor face" alt="">
+<!--      <img src="~assets/face.png" class="decor face" alt="">-->
     </section>
 <!--    <section class="bottom">-->
 <!--      <div class="container">-->
@@ -347,7 +365,7 @@ const collectionSliderOptions ={
   rewind: true,
   pagination:false,
   autoplay:false,
-  perPage:3,
+  perPage:1,
   gap:50,
   classes: {
     arrow : 'rectangle-arrow',
@@ -356,7 +374,7 @@ const collectionSliderOptions ={
   },
   breakpoints: {
     1024: {
-      perPage: 2,
+      perPage: 1,
     },
     768: {
       perPage: 1,
@@ -417,11 +435,13 @@ const roadmapSliderOptions ={
 }
 
 const faqs = [
-  {title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.'},
-  {title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.'},
-  {title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.'},
-  {title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.'},
-  {title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus aliquet etiam ullamcorper et euismod nunc. Nunc purus amet convallis risus. Nibh magna ornare elit, rutrum scelerisque ornare diam leo, lacinia. Convallis auctor faucibus blandit pellentesque vel aliquam dui ante.'},
+  {title:'what network are bitballers being released on',text:'xx'},
+  {title:'how many balls',text:'You have zero, but we have 3,333 Bitballers'},
+  {title:'where will the mint be',text:'We\'ll see'},
+  {title:'when will there be a mint',text:'Closer then you mind'},
+  {title:'what about pussy',text:'We are in'},
+  {title:'do you make collabs',text:'Only if you lick balls'},
+  {title:'what is the future of balls',text:'Meet you mom'}
 ]
 
 const decode = ()=>{
