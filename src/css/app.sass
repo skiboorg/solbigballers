@@ -6,6 +6,14 @@ body
   font-family: "Sigmar One", sans-serif !important
 
 @font-face
+  font-family: 'Giant Boss'
+  src: local('Giant Boss'), local('Giant Boss')
+  src: url('/fonts/giant-boss.otf')
+  src: url('/fonts/giant-boss.ttf') format('truetype')
+  font-weight: 900
+  font-style: normal
+
+@font-face
   font-family: 'Pixel Grafiti'
   src: local('Pixel Grafiti'), local('Pixel Grafiti')
   src: url('/fonts/Pixel-Grafiti.ttf')
@@ -207,7 +215,7 @@ a
   position: relative
   color: #FFF
   text-align: center
-  font-family: Pixel Grafiti
+  font-family: "Giant Boss"
   font-size: 128px
   font-style: normal
   font-weight: 400
@@ -268,13 +276,17 @@ a
 
 
 .cards
-  display: grid
-  grid-template-columns: 1fr 1fr 1fr
-  grid-gap: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 60px
+  @include md-d
+    img
+      width: 200px
   @include sm-d
-    grid-template-columns: 1fr 1fr
-    & .card:nth-child(3)
-      display: none
+    img
+      width: 100px
+
 
 .buttons
   pointer-events: revert
@@ -303,9 +315,9 @@ a
 .header
   position: relative
   z-index: 100
-  border-radius: 24px
-  background: #FFF
-  padding: 14px 25px 10px 25px
+  //border-radius: 24px
+  //background: #FFF
+  //padding: 14px 25px 10px 25px
   max-width: 1440px
   margin: 0 auto 70px
   display: flex
@@ -336,7 +348,7 @@ a
   position: relative
   display: inline-block
   color: #FFF
-  font-family: Pixel Grafiti
+  font-family: "Giant Boss"
   font-size: 128px
   font-style: normal
   font-weight: 400
@@ -689,6 +701,8 @@ a
         display: flex
 .logo
   margin-right: 50px
+  svg
+    width: 100%
 .menu-toggle
   display: none
   width: 28px
