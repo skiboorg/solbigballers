@@ -41,12 +41,12 @@
         </a>
       </header>
       <div class="container">
-<!--        <div class="text-center mb-40">-->
-<!--          <p class="big-title ">BitBallers</p>-->
-<!--        </div>-->
+        <div class="text-center mb-40">
+          <p class="big-title ">BitBallers</p>
+        </div>
         <div class="row q-col-gutter-lg">
           <div class="col-12 col-md-6">
-            <div class="card w-padding no-bg ">
+            <div class="card no-radius no-bg ">
               <p class="text-24 q-mb-xl">Bitballers is where creativity and technology converge in the epicenter of chaos. Here we break down boundaries and stereotypes, creating a world where everyone can stand out and express themselves without censorship. Ready to shine in your uniqueness? Welcome to the club where guys with big balls play only by their own rules.</p>
               <a href="#" class="btn bg-white text-dark">enter</a>
           </div>
@@ -102,7 +102,7 @@
           </SplideSlide>
           <SplideSlide>
             <p class="text-28  text-center ">
-              We're breaking out of the old rules and playing by our own. Inspired by the power of decentralization, we are a community of tech rebels, digital artists and boundary-breaking creatives. Bitballers isn't just about technology, it's about merging art, freedom and self-expression into one unstoppable force.
+              We believe in a future where every Bitballer can shape their own reality without restriction or censorship. Whether you're a code pioneer, an artist, or just someone who doesn't fit into patterns, Bitballers is a platform for true freedom.
             </p>
             <div class="cards">
               <img src="~/assets/s/s31.png" alt="">
@@ -174,7 +174,7 @@
 
 <!--                <p class="no-margin text-16 text-dark text-weight-bolder ">Q4 2021</p>-->
 <!--              </div>-->
-              <p class="text-52 q-mb-lg text-left text-pixel">The Ball's Way</p>
+              <p class="text-52 q-mb-lg text-left ">The Ball's Way</p>
               <p class="text-16 text-dark text-left">
                 In the vast and ever-changing expanse of the digital world, there are no straight paths - only endless possibilities. Every Bitballer is created from the fabric of code, not for predefined functions, but for the pure pleasure of decentralized creativity. No fixed plans - just the freedom to explore new horizons
 
@@ -270,7 +270,7 @@
         <q-list class="faq-list">
           <q-expansion-item :label="item.title"
                             group="faq"
-                            header-class="text-32 q-py-md text-pixel"
+                            header-class="text-32 q-py-md "
                             v-for="(item,index) in faqs" :key="index"
 
           >
@@ -465,7 +465,7 @@ const faqs = [
   {title:'What network are bitballers being released on',text:'On the only Real One'},
   {title:'how many balls',text:'You have zero, but we have 3,333 Bitballers'},
   {title:'where will the mint be',text:'We\'ll see'},
-  {title:'when will there be a mint',text:'Closer then you mind'},
+  {title:'when will there be a mint',text:'closer thAn you THINK'},
   {title:'what about pussy',text:'We are in'},
   {title:'what is the future of balls',text:'Meet you mom'}
 ]

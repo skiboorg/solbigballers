@@ -61,7 +61,18 @@ body
 
 .pen
   font-family: 'Sigmar One', sans-serif
-  background: #101010 url(~assets/bgg.png) repeat-y center center
+  background: #101010 url(~assets/bggb.png) repeat-y center center
+
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+  @include md-d
+    background: #101010 url(~assets/bgg.png) repeat-y center center
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
 img
   display: block
 a
@@ -216,7 +227,7 @@ a
   color: #FFF
   text-align: center
   font-family: "Giant Boss"
-  font-size: 128px
+  font-size: 178px
   font-style: normal
   font-weight: 400
   line-height: normal
@@ -239,6 +250,8 @@ a
     font-size: 10vw
     display: inline-block
     //-webkit-text-stroke: 4px $pink-bg-color
+  @include md-d
+    display: none
 
 
 
@@ -258,6 +271,8 @@ a
   &.no-bg
     background: transparent
     color: #ffffff
+  &.no-radius
+    border-radius: 0
   img
     display: block
     width: 100%
@@ -300,7 +315,7 @@ a
   //background: #FFBCCD
   position: relative
   padding-top: 20px
-  padding-bottom: 50px
+  padding-bottom: 120px
 
   z-index: 1
   &-blur
@@ -318,7 +333,7 @@ a
   //border-radius: 24px
   //background: #FFF
   //padding: 14px 25px 10px 25px
-  max-width: 1440px
+  max-width: 1400px
   margin: 0 auto 70px
   display: flex
   align-items: center
